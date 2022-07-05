@@ -26,7 +26,7 @@ spec:
         startingStep: 2 # delay starting analysis run until setWeight: 40%
         args:
         - name: service-name
-          value: guestbook-svc.default.svc.cluster.local
+          value: guestbook-ui.nginx.svc.cluster.local
       steps:
       - setWeight: 20
       - pause: {duration: 10s}
