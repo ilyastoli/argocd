@@ -14,24 +14,22 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           name: guestbook-ui
           ports:
             - containerPort: 80
   strategy:
     canary:
+      analysis:
+        templates:
+        - templateName: success-rate
+        startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
-        - setWeight: 20
-        - pause: {duration: 5s}
-        - analysis:
-            templates:
-              - templateName: success-rate
-            args:
-              - name: service-name
-                value: guestbook-svc.default.svc.cluster.local
-        - setWeight: 40
-        - pause: {duration: 5s}
-        - setWeight: 60
-        - pause: {duration: 5s}
-        - setWeight: 80
-        - pause: {duration: 5s}
+      - setWeight: 20
+      - pause: {duration: 5s}
+      - setWeight: 40
+      - pause: {duration: 5s}
+      - setWeight: 60
+      - pause: {duration: 5s}
+      - setWeight: 80
+      - pause: {duration: 5s}
