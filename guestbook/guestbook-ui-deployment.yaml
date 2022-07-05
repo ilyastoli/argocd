@@ -29,15 +29,15 @@ spec:
 #         startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
       - setWeight: 20
-      - pause: {duration: 5s}
+      - pause: {duration: 1s}
       - analysis:
           templates:
           - templateName: success-rate
           dryRun:
           - metricName: success-rate
       - setWeight: 40
-      - pause: {duration: 15s}
+      - pause: {duration: 1s}
       - setWeight: 60
-      - pause: {duration: 15s}
+      - pause: {duration: 1s}
       - setWeight: 80
-      - pause: {duration: 15s}
+      - pause: {duration: 1s}
