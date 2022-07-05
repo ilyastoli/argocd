@@ -5,6 +5,7 @@ metadata:
   annotations:
     notifications.argoproj.io/subscribe.on-rollout-completed.slack: general
     notifications.argoproj.io/subscribe.on-analysis-run-error.slack: general
+    notifications.argoproj.io/subscribe.on-rollout-step-completed.slack: general
 spec:
   replicas: 7
   revisionHistoryLimit: 3
