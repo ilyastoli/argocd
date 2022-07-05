@@ -26,7 +26,7 @@ spec:
 #         startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
       - setWeight: 20
-      - pause: {duration: 5s}
+      - pause: {duration: 20s}
       - analysis:
           templates:
           - templateName: success-rate
