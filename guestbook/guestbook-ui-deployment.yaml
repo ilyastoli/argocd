@@ -20,19 +20,19 @@ spec:
             - containerPort: 80
   strategy:
     canary:
-#       analysis:
-#         templates:
-#         - templateName: success-rate
-#         startingStep: 1 # delay starting analysis run until setWeight: 40%
+      analysis:
+        templates:
+        - templateName: success-rate
+        startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
       - setWeight: 20
-      - pause: {}
-      - analysis:
-          templates:
-          - templateName: success-rate
+      - pause: {duration: 5s}
+#       - analysis:
+#           templates:
+#           - templateName: success-rate
       - setWeight: 40
-      - pause: {duration: 5s}
+      - pause: {duration: 15s}
       - setWeight: 60
-      - pause: {duration: 5s}
+      - pause: {duration: 15s}
       - setWeight: 80
-      - pause: {duration: 5s}
+      - pause: {duration: 15s}
