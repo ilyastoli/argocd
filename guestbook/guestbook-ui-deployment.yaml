@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: guestbook
 spec:
-  replicas: 8
+  replicas: 7
   revisionHistoryLimit: 3
   selector:
     matchLabels:
