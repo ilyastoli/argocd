@@ -4,6 +4,7 @@ metadata:
   name: guestbook
   annotations:
     notifications.argoproj.io/subscribe.on-sync-succeeded.slack: general
+    notifications.argoproj.io/subscribe.on-analysis-run-error.slack: general
 spec:
   replicas: 7
   revisionHistoryLimit: 3
