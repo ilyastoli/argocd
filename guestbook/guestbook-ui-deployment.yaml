@@ -20,16 +20,16 @@ spec:
         - containerPort: 80
   strategy:
     canary:
-      analysis:
-        templates:
-        - templateName: success-rate
-        startingStep: 2 # delay starting analysis run until setWeight: 40%
-        args:
-        - name: service-name
-          value: guestbook-ui.nginx.svc.cluster.local
       steps:
       - setWeight: 20
       - pause: {duration: 10s}
+      - analysis:
+	      templates:
+	      - templateName: success-rate
+	      startingStep: 2 # delay starting analysis run until setWeight: 40%
+	      args:
+	      - name: service-name
+	      	value: guestbook-ui.nginx.svc.cluster.local
       - setWeight: 40
       - pause: {duration: 10s}
       - setWeight: 60
