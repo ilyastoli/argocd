@@ -20,7 +20,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
           name: guestbook-ui
           ports:
             - containerPort: 80
@@ -36,8 +36,6 @@ spec:
       - analysis:
           templates:
           - templateName: success-rate
-#           dryRun:
-#           - metricName: success-rate
       - setWeight: 40
       - pause: {duration: 1s}
       - setWeight: 60
