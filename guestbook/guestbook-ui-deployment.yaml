@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: guestbook
+  name: guestbook-1
   annotations:
     notifications.argoproj.io/subscribe.on-analysis-run-error.slack: general
     notifications.argoproj.io/subscribe.on-rollout-completed.slack: general
