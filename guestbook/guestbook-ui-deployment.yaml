@@ -36,8 +36,8 @@ spec:
       - analysis:
           templates:
           - templateName: success-rate
-#           dryRun:
-#           - metricName: success-rate
+          dryRun:
+          - metricName: success-rate
       - setWeight: 40
       - pause: {duration: 1s}
       - setWeight: 60
