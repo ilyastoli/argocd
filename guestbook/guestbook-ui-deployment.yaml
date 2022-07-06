@@ -5,8 +5,8 @@ metadata:
   annotations:
     notifications.argoproj.io/subscribe.on-analysis-run-error.slack: general
     notifications.argoproj.io/subscribe.on-rollout-completed.slack: general
-    notifications.argoproj.io/subscribe.analysis-run-failed.slack: general 
-    notifications.argoproj.io/subscribe.analysis-run-running.slack: general 
+    notifications.argoproj.io/subscribe.on-analysis-run-failed.slack: general 
+    notifications.argoproj.io/subscribe.on-analysis-run-running.slack: general 
     
 spec:
   replicas: 7
