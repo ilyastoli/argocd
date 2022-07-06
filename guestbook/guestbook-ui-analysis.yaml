@@ -4,8 +4,8 @@ metadata:
   name: success-rate
   annotations:
     notifications.argoproj.io/subscribe.on-analysis-run-error.slack: general
-    notifications.argoproj.io/subscribe.analysis-run-failed.slack: general 
-    notifications.argoproj.io/subscribe.analysis-run-running.slack: general 
+    notifications.argoproj.io/subscribe.on-analysis-run-failed.slack: general 
+    notifications.argoproj.io/subscribe.on-analysis-run-running.slack: general 
 spec:
   metrics:
   - name: success-rate
