@@ -29,8 +29,10 @@ spec:
     canary:
       analysis:
         templates:
-        - templateName: success-rate
+          - templateName: success-rate
         startingStep: 1 # delay starting analysis run until setWeight: 40%
+        dryRun:
+          - metricName: success-rate
       steps:
       - setWeight: 20
       - pause: {duration: 1s}
