@@ -33,6 +33,8 @@ spec:
         startingStep: 1 # delay starting analysis run until setWeight: 40%
         dryRun:
           - metricName: success-rate
+            successCondition: result[0] >= 0.90
+          
       steps:
       - setWeight: 20
       - pause: {duration: 1s}
