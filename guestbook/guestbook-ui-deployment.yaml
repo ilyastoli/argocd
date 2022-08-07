@@ -32,8 +32,10 @@ spec:
           - templateName: success-rate
         startingStep: 1 # delay starting analysis run until setWeight: 40%
         dryRun:
-          - metricName: success-rate
-            successCondition: result[0] >= 0.90
+          metrics:
+          - name: success-rate
+            failureCondition: result[0] >= 10
+            
           
       steps:
       - setWeight: 20
