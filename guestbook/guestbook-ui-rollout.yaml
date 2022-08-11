@@ -10,7 +10,7 @@ metadata:
     notifications.argoproj.io/subscribe.on-dryrun.slack: general
     
 spec:
-  replicas: 7
+  replicas: 0
   revisionHistoryLimit: 3
   selector:
     matchLabels:
