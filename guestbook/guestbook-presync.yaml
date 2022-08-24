@@ -10,7 +10,6 @@ spec:
       containers:
         - name: pre-status
           image: curlimages/curl
-          command:
-            - curl google.com
+          command: ["curl google.com"]
       restartPolicy: Never
   backoffLimit: 0
