@@ -13,10 +13,6 @@ spec:
         image: curlimages/curl
         command:
           - "curl"
-          - "-X"
-          - "POST"
-          - "--data-urlencode"
-          - "payload={\"channel\": \"#somechannel\", \"username\": \"hello\", \"text\": \"App Sync succeeded\", \"icon_emoji\": \":ghost:\"}"
-          - "https://hooks.slack.com/services/..."
+          - "https://google.com"
       restartPolicy: Never
   backoffLimit: 2
