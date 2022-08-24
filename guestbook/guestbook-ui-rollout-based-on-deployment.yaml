@@ -3,7 +3,7 @@ kind: Rollout
 metadata:
   name: guest-reoll-dep
 spec:
-  replicas: 10
+  replicas: 3
   workloadRef:                                 # Reference an existing Deployment using workloadRef field
     apiVersion: apps/v1
     kind: Deployment
