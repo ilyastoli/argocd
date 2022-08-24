@@ -12,4 +12,11 @@ spec:
     canary:
       maxSurge: "25%"
       maxUnavailable: 1
+      steps:
+      - setWeight: 20
+      - pause: {duration: 1s}
+      - setWeight: 40
+      - pause: {duration: 10s}
+      - setWeight: 60
+      - pause: {duration: 1s}
 
