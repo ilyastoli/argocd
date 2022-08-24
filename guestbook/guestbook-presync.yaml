@@ -11,6 +11,6 @@ spec:
       - name: ubuntu
         image: ubuntu:latest
         command: [ "/bin/bash", "-c", "--" ]
-        args: [ "sleep 10" ]
+        args: [ "sleep 3" ]
       restartPolicy: Never
   backoffLimit: 0
