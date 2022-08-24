@@ -13,4 +13,4 @@ spec:
         command: [ "/bin/bash", "-c", "--" ]
         args: [ "sleep 10" ]
       restartPolicy: Never
-  backoffLimit: 0
+  backoffLimit: 2
