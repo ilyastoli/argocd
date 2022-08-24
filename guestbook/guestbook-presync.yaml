@@ -9,7 +9,7 @@ spec:
     spec:
       containers:
         - name: pre-status
-          image: curl
+          image: curlimages/curl
           command:
             - /bin/bash
             - -c
