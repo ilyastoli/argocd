@@ -1,19 +1,16 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: deploy-status
+  name: post-status
   annotations:
     argocd.argoproj.io/hook: PostSync
 spec:
   template:
     spec:
       containers:
-        - name: deploy-status
-          image: curlimages/curl
-          command:
-            - /bin/bash
-            - -c
-            - |
-              curl google.com
+      - name: ubuntu
+        image: ubuntu:latest
+        command: [ "/bin/bash", "-c", "--" ]
+        args: [ "sleep 10" ]
       restartPolicy: Never
   backoffLimit: 0
