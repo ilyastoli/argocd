@@ -12,7 +12,19 @@ spec:
       - name: deploy-success
         image: curlimages/curl
         command:
-          - "curl"
-          - "https://google.com"
+            - curl
+            - |
+              --location --request PUT 'https://googl.com/metrics?appName=sdsdsend&metricType=sdsdsds' \
+              --header 'Content-Type: application/json' \
+              --header 'X-YOSI: sdssdsdsd' \
+                --data-raw '{
+              "owner": "ilya",
+              "gitHash": "sdsdsds",
+              "uniqueId": "666",
+              "branch": "master",
+              "elapsed": 1,
+              "status": "success",
+              "region": "us-east-1",
+              }'
       restartPolicy: Never
   backoffLimit: 2
