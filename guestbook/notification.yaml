@@ -3,11 +3,8 @@ kind: Rollout
 metadata:
   name: guestbook-for-notification
   annotations:
-    notifications.argoproj.io/subscribe.on-analysis-run-error.slack: general
     notifications.argoproj.io/subscribe.on-rollout-completed.slack: general
-    notifications.argoproj.io/subscribe.on-analysis-run-failed.slack: general 
-    notifications.argoproj.io/subscribe.on-analysis-run-running.slack: general
-    notifications.argoproj.io/subscribe.on-dryrun.slack: general
+    notifications.argoproj.io/subscribe.rollout-step-completed.slack: general
     
 spec:
   replicas: 3
