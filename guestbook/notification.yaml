@@ -7,6 +7,7 @@ metadata:
     notifications.argoproj.io/subscribe.rollout-step-completed.slack: general
   labels:
     argocd.argoproj.io/instance: stage-use1-monday-sdsdds-sdsd-platform
+    moti: babnana
  
     
 spec:
