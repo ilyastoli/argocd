@@ -5,6 +5,9 @@ metadata:
   annotations:
     notifications.argoproj.io/subscribe.on-rollout-completed.slack: general
     notifications.argoproj.io/subscribe.rollout-step-completed.slack: general
+  labels:
+    argocd.argoproj.io/instance: stage-use1-monday-sdsdds-sdsd-platform
+ 
     
 spec:
   replicas: 3
